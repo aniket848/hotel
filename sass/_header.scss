@@ -1,0 +1,146 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    @media only screen and (max-width:$width-smallest){
+         flex-wrap: wrap;
+         align-content: space-between;
+    }
+}
+
+.logo{
+     
+    margin-left:2rem ;
+    &-img{
+       width:3.4rem;
+       height:3.4rem;
+    }
+}
+
+.search{
+    //background-color: orangered;
+    flex:0 0 45rem;
+    display: flex;
+    height:3rem;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width:$width-smallest){
+        order:1;
+        margin: auto;
+        flex-shrink: 1;
+    }
+
+    &__input{
+       width:90%;
+       height:2.6rem;
+       margin-right:-3rem;
+       border-radius: 20rem;
+       border:none;
+       transition: all .2s;
+       padding: .5rem 1.2rem;
+       background-color: var(--color-Grey-light-2);
+
+       @media only screen and (max-width:$width-smallest){
+        width:88%;
+      }
+
+       &:focus{
+           outline: none;
+           width:100%;
+
+           
+           @media only screen and (max-width:$width-smallest){
+           width:96%;
+         }
+       }
+
+       &::placeholder{
+           color:var( --color-Grey-dark-3);
+           font-size: 1.4rem;
+       }
+    }
+
+    &__button{
+        border:none;
+        background-color: var(--color-Grey-light-2);
+    }
+     
+    &__icon{
+       width:2rem;
+       height:2rem;
+       fill: var(--color-Grey-light-4);
+    }
+}
+
+.search__input:focus + .search__button{
+    background-color: var(---color-Grey-light-3);
+}
+
+.search__input:focus{
+    background-color: var(--color-Grey-light-3);
+}
+
+.user{
+    flex:0 0 10rem;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+    &__button{
+        border:none;
+        padding:1.4rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        text-align: center;
+        background-color: #fff;
+
+        &:hover{
+            background-color:var(--color-Grey-light-3);
+        }
+    }
+
+    &__icon{
+       height:2.3rem;
+       width:2.3rem;
+       margin-right: -.7rem;
+    }
+
+    &__notification{
+       height:1.5rem;
+       width:1.5rem;
+       border-radius: 50%;
+       background-color: var(--color-Primary-light);
+       color:#fff;
+       font-size: 1rem;
+       align-self: flex-start;
+       padding: 1px;
+      
+    }
+
+    &__photo{
+        height:3.2rem;
+        width:3.2rem;
+        border-radius:100%;
+    }
+
+    &__name{
+       align-items: center;
+       font-weight: bold;
+       line-height: 1.4;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
